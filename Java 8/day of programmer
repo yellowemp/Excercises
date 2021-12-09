@@ -1,0 +1,15 @@
+public static String dayOfProgrammer(int year) {
+
+        String ret = ".09." + year;
+        if (year <= 1917 && year % 4 == 0){
+                ret = 12 + ret;
+        } else if (year > 1918 &&(year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+            ret = 12 + ret;
+        } else if (year == 1918){
+            ret = 26 + ret;
+        } else {
+            ret = 13 + ret;
+        }
+        return ret;
+
+    }

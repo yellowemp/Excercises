@@ -1,0 +1,16 @@
+public static int divisibleSumPairs(int n, int k, List<Integer> ar) {
+    // Write your code here
+        int x =0;
+        int y =1;
+
+        for(int ctr =0; y<n; ctr++){
+            for(int i=y; i<n; i++){
+                if ((ar.get(ctr).intValue()+ar.get(i).intValue())%k==0){
+                    x+=1;
+                }
+            }
+            y++;
+        }
+        return x;
+
+    }

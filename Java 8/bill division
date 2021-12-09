@@ -1,0 +1,8 @@
+public static void bonAppetit(List<Integer> bill, int k, int b) {
+        Integer x = bill.get(k);
+        Integer y  = bill.stream().filter(i -> i != x).mapToInt(Integer::intValue).sum();
+        
+        int c = y.intValue() /2;
+        System.out.println((b-c==0) ? "Bon Appetit" : b-c);
+
+    }

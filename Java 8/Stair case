@@ -1,0 +1,17 @@
+public static void staircase(int n) {
+
+        
+        String y = "";
+        String z ="";
+        
+        for (int x= 1; x<=n; x++) {
+            
+            z = z + "#";
+            for (int a=n; a>x; a--){
+                y = y + " ";
+            }
+            System.out.println(y + z);
+            y="";
+        }
+
+    }

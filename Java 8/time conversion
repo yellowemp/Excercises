@@ -1,0 +1,16 @@
+public static String timeConversion(String s) {
+        String x = "";
+        int y = Integer.parseInt(s.substring(0,2));
+        if (s.charAt(8) == 'A'){
+            if (y==12){
+                y=0;
+            }
+            x="0";
+        } else if (s.charAt(8) == 'P') {
+            if (y!=12){
+                y= y+12;
+            }
+        }
+        x = x+ y + s.substring(2,8); 
+        return x;
+    }

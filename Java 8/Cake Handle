@@ -1,0 +1,6 @@
+public static int birthdayCakeCandles(List<Integer> candles) {
+        Collections.sort(candles);
+        int b = candles.get(candles.size()-1).intValue();
+        List<Integer> f = candles.stream().filter(a -> a.compareTo(b) == 0).collect(Collectors.toList());
+        return f.size();
+    }

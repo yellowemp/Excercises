@@ -1,0 +1,22 @@
+ public static List<Integer> gradingStudents(List<Integer> grades) {
+        List<Integer> f = new ArrayList<Integer>();
+        BiConsumer<Integer, List<Integer>> c = (Integer x, List<Integer> list) -> {
+            int y = x.intValue();
+            int z = 0;
+            if (y >= 38){
+                if(y%5!=0){
+                    z = x.intValue()%10;
+                    z = (z > 5) ? 10 - z : 5-z;
+                }
+                if (z<=2){
+                    y = y + z;
+                }
+            }
+            list.add(new Integer(y));
+        };
+        for (Integer s : grades){
+            c.accept(s,f);
+        }
+        return f;
+
+    }

@@ -1,0 +1,14 @@
+public static int migratoryBirds(List<Integer> arr) {
+        long cnt = 0;
+        int ret = 0;
+        for (int x = 1; x<=5; x++){
+            long f = Collections.frequency(arr, x);
+            if (f > cnt){
+                cnt = f;
+                ret = x;
+            }
+        }
+
+        return ret;
+
+    }

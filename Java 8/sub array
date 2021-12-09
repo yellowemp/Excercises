@@ -1,0 +1,27 @@
+public static int birthday(List<Integer> s, int d, int m) {
+
+        int ctr=0;
+        int ctrl =0;
+        int ret = 0;
+        int mvctr = 0;
+        
+        while (ctrl <= s.size()){
+            int val =0;
+            
+            for (int x = 0; x < m; x++){
+                
+                val = val + s.get(mvctr);
+                mvctr+=1;
+            }
+            if (val == d){
+                
+                ret+=1;
+            }
+            ctr+=1;
+            mvctr = ctr;
+            ctrl = ctr+m;
+
+            
+        }
+        return ret;
+    }

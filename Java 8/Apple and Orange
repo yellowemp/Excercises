@@ -1,0 +1,19 @@
+public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
+        int x = 0;
+        int y = 0;
+        //apple
+        BiFunction<Integer, List<Integer>,List<Integer>> func = (Integer d, List<Integer> list) -> {
+            List<Integer> rlist = new ArrayList<Integer>();
+            for (Integer f : list){
+                rlist.add(d + f.intValue());
+            }
+            return rlist;  
+        };
+        List<Integer> appleList = func.apply(new Integer(a), apples);
+        List<Integer> orangeList = func.apply(new Integer(b), oranges);
+        
+        x = appleList.stream().filter(n -> n.intValue()>= s && n.intValue()<= t).collect(Collectors.toList()).size();
+        y = orangeList.stream().filter(n -> n.intValue()>= s && n.intValue()<= t).collect(Collectors.toList()).size();
+        System.out.println(x);
+        System.out.println(y);
+    }

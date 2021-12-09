@@ -1,0 +1,14 @@
+public static void miniMaxSum(List<Integer> arr) {
+
+        long minsum=0;
+        long maxsum=0;
+        long z=0;
+        arr.sort((p1, p2) -> p1.compareTo(p2));
+        for(int i=1; i<4; i++){
+             z+=arr.get(i);
+             
+        }
+         minsum = z + arr.get(0);
+         maxsum = z + arr.get(4);
+         System.out.println(minsum+" "+maxsum);
+}

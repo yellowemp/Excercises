@@ -1,0 +1,8 @@
+public static long aVeryBigSum(List<Long> ar) {
+        long x = 0;
+        for (Long l : ar){
+            x = x + l.longValue();
+        }
+        return x;
+
+    }

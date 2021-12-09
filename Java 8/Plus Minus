@@ -1,0 +1,20 @@
+ public static void plusMinus(List<Integer> arr) {
+    // Write your code here
+        float x = 0;
+        float y = 0;
+        float z = 0;
+        
+        for (Integer l : arr){
+            if(l.intValue()>0){
+                x++;
+            } else if(l.intValue()<0){
+                y++;
+            }else {
+                z++;
+            }
+        }
+        
+        System.out.println(String.format("%.6f",x/arr.size()));
+        System.out.println(String.format("%.6f",y/arr.size()));
+        System.out.println(String.format("%.6f",z/arr.size()));
+}

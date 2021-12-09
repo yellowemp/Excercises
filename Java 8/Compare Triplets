@@ -1,0 +1,17 @@
+public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+        List<Integer> y = new ArrayList<>();
+        int a1=0;
+        int b1=0;
+
+        for (int x=0;x<3;x++){
+            if(a.get(x)>b.get(x)){
+                a1++;
+            } else if (a.get(x)<b.get(x)){
+                b1++;
+            } 
+        }
+        y.add(a1);
+        y.add(b1);
+        return y;
+
+    }
