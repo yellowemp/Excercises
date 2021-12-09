@@ -1,0 +1,35 @@
+public static int pageCount(int n, int p) {
+
+        int cnt = 0;
+        int a = n/2;
+        int s = (p <= a ) ? 1 : n;
+        int f = 0;
+
+        if ((n-1 == p  && n%2 !=0) ||n == p ||  p == 1){
+            return cnt;
+        }
+        boolean notF = true;
+        while(notF){
+            cnt++;
+            if (p <= a ) {
+                s+=2;
+                f = s-1;
+            } else{
+                s-=2;          
+                if (n%2==0){
+                    f = s+1;
+                }else {
+                    f = s-1;
+                }
+            }
+ 
+                
+
+            if ((s == p || f == p)){
+                notF = false;
+            } 
+             
+          
+        }
+        return cnt;
+    }
