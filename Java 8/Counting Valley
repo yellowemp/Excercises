@@ -1,0 +1,15 @@
+public static int countingValleys(int steps, String path) {
+        int count = 0;
+        int steep = 0; 
+        for (int x =0; x<steps; x++){
+            if (path.charAt(x) == 'U'){
+                steep++;
+            } else {
+                steep--;
+            }
+            if (steep == 0 && path.charAt(x) == 'U'){
+                count++;
+            }
+        }
+        return count;
+    }
