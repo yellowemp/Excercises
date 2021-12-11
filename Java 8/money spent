@@ -1,0 +1,15 @@
+static int getMoneySpent(int[] keyboards, int[] drives, int b) {
+        int r = -1;
+        int [] k = Arrays.stream(keyboards).sorted().toArray();
+        int [] d = Arrays.stream(drives).sorted().toArray();
+
+        for (int x = k.length-1; x>=0; x--){
+            
+            for(int y = d.length-1; y>=0; y--){
+                if (b - (k[x] + d[y]) >= 0
+                    && k[x] + d[y] > r){
+                    r = k[x] + d[y];
+                }
+            }
+        }
+        return r;
