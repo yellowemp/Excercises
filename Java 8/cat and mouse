@@ -1,0 +1,13 @@
+static String catAndMouse(int x, int y, int z) {
+        int a = Math.abs(x-z);
+        int b = Math.abs(y -z);
+        String mes = "";
+        if (a < b){
+            mes = "Cat A";
+        } else if (a>b){
+            mes = "Cat B";
+        } else {
+            mes = "Mouse C";
+        }
+        return mes;
+    }
