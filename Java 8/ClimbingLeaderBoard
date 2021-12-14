@@ -1,0 +1,20 @@
+public static List<Integer> climbingLeaderboard(List<Integer> ranked, List<Integer> player) {
+    // Write your code here
+        List<Integer> ret = new ArrayList<Integer>();
+        List<Integer> dum = ranked.stream().sorted().distinct().collect(Collectors.toList());
+        
+        boolean notFound = true;
+        int ctr = 0;
+        for(Integer x : player){
+            while(notFound &&ctr<dum.size()){
+                if(dum.get(ctr)>x){
+                    notFound = false;
+               } else {
+                   ctr+=1;
+               }
+            }
+            ret.add((dum.size()+1)-ctr);
+            notFound = true;
+        }
+        return ret;
+    }
